@@ -45,10 +45,12 @@ export default function SignUp({setToken}){
     return(
         <>
             <form onSubmit={submit}>
-                <input type="text" name={"username"} onChange={setChange} placeholder={"username..."}/>
-                <input type="password" name={"password"} onChange={setChange} placeholder={"password..."}/>
+                <input type="text" name={"username"} onChange={setChange} placeholder={"username..."} minLength={4} maxLength={10} />
+                <input type="password" name={"password"} onChange={setChange} placeholder={"password..."} minLength={8} />
                 <input id={"submit"} type="submit" value={"Submit"}/>
             </form>
+            
         </>
     )
 }
+
